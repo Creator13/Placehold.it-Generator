@@ -1,5 +1,13 @@
 package com.cvanbattum.placeholdgen;
 
+/**
+ * The <code>ImageFormat</code> enum provides the several image formats 
+ * supported by Placehold.it. The extension of each image format can be 
+ * requested using the method <code>getExtension()</code>.
+ * 
+ * @author Casper van Battum
+ *
+ */
 public enum ImageFormat {
 
 	GIF(".gif"), 
