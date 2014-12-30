@@ -6,6 +6,7 @@ package com.cvanbattum.placeholdgen;
  * requested using the method <code>getExtension()</code>.
  * 
  * @author Casper van Battum
+ * @version 1.0
  *
  */
 public enum ImageFormat {
