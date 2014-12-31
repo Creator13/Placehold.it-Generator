@@ -141,6 +141,17 @@ public class OptionalSettings {
 	}
 	
 	/**
+	 * <p>The background color is the color of the placeholder. By default,
+	 * this is a lighter gray color.</p>
+	 * 
+	 * @param bgColor The background color of the placeholder box.
+	 */
+	public OptionalSettings(Color bgColor) {
+		this.backgroundColor = bgColor;
+		
+	}
+	
+	/**
 	 * <p>The image format is the format of the generated placeholder. The
 	 * image format may be gif, jpg or png. If none is specified, Placehold.it
 	 * will by default make a gif image. However if you need more colors in
@@ -275,7 +286,10 @@ public class OptionalSettings {
 	 * @param foregroundColor The color for the text in the box.
 	 */
 	public void setForegroundColor(Color foregroundColor) {
-		this.foregroundColor = foregroundColor;
+		if (backgroundColor_isSet()) {
+			this.foregroundColor = foregroundColor;
+		}
+		else throw new IllegalStateException("Background color must be set in order to change foreground color");
 		
 	}
 	
@@ -292,7 +306,10 @@ public class OptionalSettings {
 	 * @param rgb RGB representation of the foreground color.
 	 */
 	public void setForegroundColor(int rgb) {
-		this.foregroundColor = new Color(rgb);
+		if (backgroundColor_isSet()) {
+			this.foregroundColor = new Color(rgb);
+		}
+		else throw new IllegalStateException("Background color must be set in order to change foreground color");
 		
 	}
 	
@@ -308,7 +325,10 @@ public class OptionalSettings {
 	 * @param b The blue component of the foreground color.
 	 */
 	public void setForegroundColor(int r, int g, int b) {
-		this.foregroundColor = new Color(r, g, b);
+		if (backgroundColor_isSet()) {
+			this.foregroundColor = new Color(r, g, b);
+		}
+		else throw new IllegalStateException("Background color must be set in order to change foreground color");
 		
 	}
 	
