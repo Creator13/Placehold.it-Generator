@@ -279,6 +279,8 @@ public class OptionalSettings {
 		
 	}
 
+	// TODO: make it possible to only have a foreground color by forcing the default background color.
+	
 	/**
 	 * Sets or changes the current foreground color. The foreground color is
 	 * the color of the text displayed in the placeholder.
