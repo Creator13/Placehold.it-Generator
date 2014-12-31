@@ -11,8 +11,20 @@ package com.cvanbattum.placeholdgen;
  */
 public enum ImageFormat {
 
-	GIF(".gif"), 
-	JPEG(".jpg"), 
+	/**
+	 * GIF is a lightweight image format, with support for animations, but it
+	 * cannot contain every 24-bit color.
+	 */
+	GIF(".gif"),
+	/**
+	 * JPEG is the lightest image format with a high compression rate, and it
+	 * can contain all 24-bit colors.
+	 */
+	JPEG(".jpg"),
+	/**
+	 * PNG is the heaviest image format with a low compression rate, but it can
+	 * contain all 24-bit colors, opposed to a GIF image.
+	 */
 	PNG(".png");
 	
 	private String extension;
