@@ -21,6 +21,11 @@ public class OptionalSettings {
 	private String customText;
 	
 	/**
+	 * Creates an empty instance of this class.
+	 */
+	public OptionalSettings() {}
+	
+	/**
 	 * <p>The image format is the format of the generated placeholder. The
 	 * image format may be gif, jpg or png. If none is specified, Placehold.it
 	 * will by default make a gif image. However if you need more colors in
