@@ -341,63 +341,59 @@ public class OptionalSettings {
 	 * Checks if all the fields in this settings class are empty.
 	 * 
 	 * @return 	<code>true</code> if this class contains no settings,
-	 * 			<code>flase</code> otherwise.
-	 */
-	public boolean isEmpty() {
-		if (backgroundColor_isEmtpy() && foregroundColor_isEmtpy() && 
-				imageFormat_isEmtpy() && customText_isEmtpy()) return true;
-		else return false;
-		
-	}
-	
-	/**
-	 * Checks whether the <code>backgroundColor</code> field does not contain
-	 * any value.
-	 * 
-	 * @return 	<code>true</code> if <code>backgroundColor</code> is empty,
 	 * 			<code>false</code> otherwise.
 	 */
-	public boolean backgroundColor_isEmtpy() {
-		if (backgroundColor == null) return true; 
+	public boolean isEmpty() {
+		if (backgroundColor_isSet() || foregroundColor_isSet() ||
+				imageFormat_isSet() || customText_isSet()) return false;
+		else return true;
+		
+	}
+	
+	/**
+	 * Checks whether the <code>backgroundColor</code> field contains any value.
+	 * 
+	 * @return 	<code>true</code> if <code>backgroundColor</code> is set,
+	 * 			<code>false</code> otherwise.
+	 */
+	public boolean backgroundColor_isSet() {
+		if (! (backgroundColor == null)) return true; 
 		else return false;
 		
 	}
 	
 	/**
-	 * Checks whether the <code>foregroundColor</code> field does not contain
-	 * any value.
+	 * Checks whether the <code>foregroundColor</code> field contains any value.
 	 * 
 	 * @return 	<code>true</code> if <code>foregroundColor</code> is empty,
 	 * 			<code>false</code> otherwise.
 	 */
-	public boolean foregroundColor_isEmtpy() {
-		if (backgroundColor == null) return true; 
+	public boolean foregroundColor_isSet() {
+		if (! (foregroundColor == null)) return true; 
 		else return false;
 		
 	}
 	
 	/**
-	 * Checks whether the <code>imageFormat</code> field does not contain
-	 * any value.
+	 * Checks whether the <code>imageFormat</code> field contains any value.
 	 * 
 	 * @return 	<code>true</code> if <code>imageFormat</code> is empty,
 	 * 			<code>false</code> otherwise.
 	 */
-	public boolean imageFormat_isEmtpy() {
-		if (backgroundColor == null) return true; 
+	public boolean imageFormat_isSet() {
+		if (! (imageFormat == null)) return true; 
 		else return false;
 		
 	}
 	
 	/**
-	 * Checks whether the <code>customText</code> field does not contain
-	 * any value.
+	 * Checks whether the <code>customText</code> field contains any value.
 	 * 
-	 * @return 	<code>true</code> if <code>customText</code> is empty,
+	 * @return 	<code>true</code> if <code>customText</code> is is,
 	 * 			<code>false</code> otherwise.
 	 */
-	public boolean customText_isEmtpy() {
-		if (backgroundColor == null) return true; 
+	public boolean customText_isSet() {
+		if (! (customText == null)) return true; 
 		else return false;
 		
 	}
