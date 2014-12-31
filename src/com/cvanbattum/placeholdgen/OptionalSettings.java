@@ -336,5 +336,70 @@ public class OptionalSettings {
 		this.customText = customText;
 		
 	}
+	
+	/**
+	 * Checks if all the fields in this settings class are empty.
+	 * 
+	 * @return 	<code>true</code> if this class contains no settings,
+	 * 			<code>flase</code> otherwise.
+	 */
+	public boolean isEmpty() {
+		if (backgroundColor_isEmtpy() && foregroundColor_isEmtpy() && 
+				imageFormat_isEmtpy() && customText_isEmtpy()) return true;
+		else return false;
+		
+	}
+	
+	/**
+	 * Checks whether the <code>backgroundColor</code> field does not contain
+	 * any value.
+	 * 
+	 * @return 	<code>true</code> if <code>backgroundColor</code> is empty,
+	 * 			<code>false</code> otherwise.
+	 */
+	public boolean backgroundColor_isEmtpy() {
+		if (backgroundColor == null) return true; 
+		else return false;
+		
+	}
+	
+	/**
+	 * Checks whether the <code>foregroundColor</code> field does not contain
+	 * any value.
+	 * 
+	 * @return 	<code>true</code> if <code>foregroundColor</code> is empty,
+	 * 			<code>false</code> otherwise.
+	 */
+	public boolean foregroundColor_isEmtpy() {
+		if (backgroundColor == null) return true; 
+		else return false;
+		
+	}
+	
+	/**
+	 * Checks whether the <code>imageFormat</code> field does not contain
+	 * any value.
+	 * 
+	 * @return 	<code>true</code> if <code>imageFormat</code> is empty,
+	 * 			<code>false</code> otherwise.
+	 */
+	public boolean imageFormat_isEmtpy() {
+		if (backgroundColor == null) return true; 
+		else return false;
+		
+	}
+	
+	/**
+	 * Checks whether the <code>customText</code> field does not contain
+	 * any value.
+	 * 
+	 * @return 	<code>true</code> if <code>customText</code> is empty,
+	 * 			<code>false</code> otherwise.
+	 */
+	public boolean customText_isEmtpy() {
+		if (backgroundColor == null) return true; 
+		else return false;
+		
+	}
 
 }
