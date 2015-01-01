@@ -2,6 +2,12 @@ package com.cvanbattum.placeholdgen;
 
 import java.awt.Color;
 
+/**
+ * 
+ * @author Casper van Battum
+ * @version 1.0
+ *
+ */
 public class Generator {
 
 	public static String generateLink(Size size, OptionalSettings settings) {
